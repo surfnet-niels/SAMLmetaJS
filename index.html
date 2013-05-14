@@ -3,10 +3,10 @@
 <head>
 	<meta charset="utf-8">
 	<title>SAMLmetaJS Demo</title>
-	<meta name="author" content="Andreas Åkre Solberg">
+	<meta name="author" content="Niels van Dijk" >
 
 	<!-- Include Google maps to use with SAMLmetaJS locaiton plugin -->
-	<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
+	<!--<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>-->
 
 	<!-- JQuery + JQuery UI -->
 	<script type="text/javascript" src="jquery/js/jquery-1.5.1.min.js"></script>
@@ -15,16 +15,23 @@
 
 	<!-- SAMLmetaJS -->
 	<script type="text/javascript" src="samlmetajs/samlmeta.js"></script>
-	<script type="text/javascript" src="samlmetajs/mdreader.js"></script>
-	<script type="text/javascript" src="samlmetajs/samlmeta.xml.js"></script>
-	<script type="text/javascript" src="samlmetajs/samlmeta.plugin.info.js"></script>
+	<script type="text/javascript" src="samlmetajs/samlmeta.plugin.conext.js"></script>
 	<script type="text/javascript" src="samlmetajs/samlmeta.plugin.org.js"></script>
 	<script type="text/javascript" src="samlmetajs/samlmeta.plugin.contact.js"></script>
+	<script type="text/javascript" src="samlmetajs/samlmeta.plugin.info.js"></script>
 	<script type="text/javascript" src="samlmetajs/samlmeta.plugin.saml2sp.js"></script>
 	<!-- <script type="text/javascript" src="samlmetajs/samlmeta.plugin.location.js"></script> -->
 	<script type="text/javascript" src="samlmetajs/samlmeta.plugin.certs.js"></script>
 	<script type="text/javascript" src="samlmetajs/samlmeta.plugin.attributes.js"></script>
+	<script type="text/javascript" src="samlmetajs/samlmeta.plugin.metadata.js"></script>
 	<!-- <script type="text/javascript" src="samlmetajs/samlmeta.plugin.fedlab.js"></script> -->
+	<!-- <script type="text/javascript" src="samlmetajs/samlmeta.plugin.template.js"></script> -->
+
+	<!-- XML processing helper classes-->
+	<script type="text/javascript" src="samlmetajs/samlmeta.xml.js"></script>
+	<script type="text/javascript" src="samlmetajs/mdreader.js"></script>
+
+
 
 	<!-- 
 		You are reccomended to select which plugins you would like to use, and then use the download package
@@ -52,12 +59,14 @@
 				'showValidation': true,
 				'showValidationLevel': {
 					'info': false,
-					'ok': false,
+					'ok': true,
 					'warning': true,
 					'error': true
 				}
 			};
 	        $("textarea#metadata").SAMLmetaJS(options);
+	        $( document ).tooltip();
+	        
 	
 	    });
 	</script>
@@ -71,12 +80,10 @@
 	</p>
 	
 	<h1>Demo of SAMLmetaJS</h1>
-
 	<form action="?" method="post">
-		<textarea name="metadata" id="metadata" style="width: 100%"></textarea>
-		<input type="submit" name="s" value="Complete »" />		
+		<textarea name="metadata" id="metadata" style="width: 80%; height: 500px"></textarea>
+		<textarea name="conextdata" id="conextdata" style="display: none;" ></textarea>
+		<!-- <input type="submit" name="s" value="Complete »" /> -->		
 	</form>
-
-
 </body>
 </html>
