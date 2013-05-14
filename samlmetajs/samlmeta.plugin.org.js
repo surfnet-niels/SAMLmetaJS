@@ -162,14 +162,17 @@
 			$("div#org button.addname").click(function(e) {
 				e.preventDefault();
 				UI.addOrgname('en', '');
+				UI.addOrgname('nl', '');
 			});
 			$("div#org button.adddisplayname").click(function(e) {
 				e.preventDefault();
 				UI.addOrgdisplayname('en', '');
+				UI.addOrgdisplayname('nl', '');
 			});
 			$("div#org button.addurl").click(function(e) {
 				e.preventDefault();
 				UI.addOrgurl('en', '');
+				UI.addOrgurl('nl', '');
 			});
 		},
 

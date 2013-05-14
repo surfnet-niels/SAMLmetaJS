@@ -245,7 +245,7 @@
 
 				'<fieldset class="entityid"><legend>Entity ID</legend>',
 				'<div id="div-entityid">',
-				'<input style="width: 600px" type="text" name="entityid" id="entityid" value="" />',
+				'<input style="width: 600px" type="text" name="entityid" id="entityid" value="" /><img src="samlmetajs/icons/help.png">',
 				'<p style="margin: 0px">The format MUST be an URI.</p>',
 				'</div>',
 				'</fieldset>',
@@ -320,6 +320,10 @@
 			$("div#info button.addprivacystatementurl").click(function(e) {
 				e.preventDefault();
 				UI.addPrivacyStatementURL('en', '');
+			});
+			$("div#info button.showHelp").click(function(e) {
+				e.preventDefault();
+				UI.showHelp('en', '');
 			});
 		},
 

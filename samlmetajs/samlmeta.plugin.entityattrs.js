@@ -64,7 +64,7 @@
 		},
 
 		fromXML: function (entitydescriptor) {
-		        var i;
+		   var i;
 
 			// Clear attributes
 			UI.clearEntityAttrs();
