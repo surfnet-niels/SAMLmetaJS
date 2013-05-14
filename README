@@ -1,9 +1,12 @@
 
+This is a modified version of samlmetajs!
+This version intruduces additional tabs and questions in regard 
+to the Service Provider connectiosn for SURFconest
+
+For the original product, see:
+
 More information and documentation available at:
 http://samlmetajs.simplesamlphp.org
-
-
-
 
 Copyright (c) 2011-2012, UNINETT AS and Yaco Sistemas
 All rights reserved.
