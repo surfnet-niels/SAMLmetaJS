@@ -104,7 +104,7 @@ var SAMLmetaJS = {};
 		},
 		'languages': {
 			'en': 'English',
-			'no': 'Norwegian (bokmål)',
+			/*'no': 'Norwegian (bokmål)',
 			'nn': 'Norwegian (nynorsk)',
 			'se': 'Sámegiella',
 			'da': 'Danish',
@@ -113,9 +113,9 @@ var SAMLmetaJS = {};
 			'fi': 'Finnish',
 			'es': 'Español',
 			'fr': 'Français',
-			'it': 'Italian',
+			'it': 'Italian',*/
 			'nl': 'Nederlands',
-			'lb': 'Luxembourgish',
+			/*'lb': 'Luxembourgish',
 			'cs': 'Czech',
 			'sl': 'Slovenščina',
 			'lt': 'Lietuvių kalba',
@@ -126,14 +126,14 @@ var SAMLmetaJS = {};
 			'pt-BR': 'Português brasileiro',
 			'tr': 'Türkçe',
 			'el': 'ελληνικά',
-			'ja': 'Japanese (日本語)'
+			'ja': 'Japanese (日本語)'*/
 		},
 		'contactTypes' : {
 			'administrative' : 'Administrative',
 			'technical': 'Technical',
 			'support': 'Support',
 			'billing': 'Billing',
-			'other': 'Other'
+			//'other': 'Other'
 		},
 		'endpointTypes' : {
 			'sp': {
@@ -164,6 +164,21 @@ var SAMLmetaJS = {};
 			'urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol': 'Discovery Response'
 		},
 		'attributes' : {
+			'urn:oid:0.9.2342.19200300.100.1.1': 'uid',
+			'urn:oid:0.9.2342.19200300.100.1.3': 'mail',
+			'urn:oid:1.3.6.1.4.1.5923.1.1.1.1': 'eduPersonAffiliation',
+			'urn:oid:1.3.6.1.4.1.5923.1.1.1.10': 'eduPersonTargetedID',
+			'urn:oid:1.3.6.1.4.1.5923.1.1.1.2': 'eduPersonNickname',
+			'urn:oid:1.3.6.1.4.1.5923.1.1.1.6': 'eduPersonPrincipalName',
+			'urn:oid:1.3.6.1.4.1.5923.1.1.1.7': 'eduPersonEntitlement',
+			'urn:oid:1.3.6.1.4.1.5923.1.5.1.1': 'isMemberOf',
+			'urn:oid:2.16.840.1.113730.3.1.241': 'displayName',
+			'urn:oid:2.5.4.3': 'cn',
+			'urn:oid:2.5.4.4': 'sn',
+			'urn:oid:2.5.4.41': 'name',
+			'urn:oid:2.5.4.42': 'givenName'
+
+			/*
 			'urn:oid:0.9.2342.19200300.100.1.1': 'uid',
 			'urn:oid:0.9.2342.19200300.100.1.10': 'manager',
 			'urn:oid:0.9.2342.19200300.100.1.2': 'textEncodedORAddress',
@@ -229,7 +244,23 @@ var SAMLmetaJS = {};
 			'urn:oid:2.5.4.42': 'givenName',
 			'urn:oid:2.5.4.7': 'l',
 			'urn:oid:2.5.4.9': 'street'
-		}
+			*/
+		},
+		'attributeDescriptions' : {
+			'urn:oid:0.9.2342.19200300.100.1.1': 'I am a uid',
+			'urn:oid:0.9.2342.19200300.100.1.3': 'I am a mail address',
+			'urn:oid:1.3.6.1.4.1.5923.1.1.1.1': 'I am an eduPersonAffiliation',
+			'urn:oid:1.3.6.1.4.1.5923.1.1.1.10': 'I am an eduPersonTargetedID',
+			'urn:oid:1.3.6.1.4.1.5923.1.1.1.2': 'I am an eduPersonNickname',
+			'urn:oid:1.3.6.1.4.1.5923.1.1.1.6': 'I am an eduPersonPrincipalName',
+			'urn:oid:1.3.6.1.4.1.5923.1.1.1.7': 'I am an eduPersonEntitlement',
+			'urn:oid:1.3.6.1.4.1.5923.1.5.1.1': 'I am an isMemberOf',
+			'urn:oid:2.16.840.1.113730.3.1.241': 'I am an displayName',
+			'urn:oid:2.5.4.3': 'I am an cn',
+			'urn:oid:2.5.4.4': 'I am an sn',
+			'urn:oid:2.5.4.41': 'I am an name',
+			'urn:oid:2.5.4.42': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nulla ipsum, laoreet id blandit eu, mollis quis ligula. Nam lorem magna, auctor sit amet pharetra sed, varius id leo. Praesent in ipsum sit amet diam pellentesque mattis vel non lorem. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Praesent et tempor justo. Duis magna metus, tempor ut mollis non, cursus non nisi. Duis porta nunc id ipsum luctus porttitor. '
+		},
 	};
 
 	SAMLmetaJS.TestEngine = function(ruleset) {
@@ -413,18 +444,29 @@ var SAMLmetaJS = {};
 				isValid = true,
 				$tabs = $(event.target),
 				selected = $tabs.tabs("option", "selected"),
-				tab = $tabs.find('.ui-tabs-panel').eq(selected).attr('id');
+				tab = $tabs.find('.ui-tabs-panel').eq(selected).attr('id'),
+				nexttab = $tabs.find('.ui-tabs-panel').eq(ui.index).attr('id');
+
+			console.log("just left tab id:" + selected);			
+			console.log("just left tab name:" + tab);
+			console.log("newly selected tab id is:" + ui.index);
+			console.log("newly selected tab name is:" + nexttab);
 
 			if (tab !== 'rawmetadata') {
+				// Validate the contents of the tab we just left
 				isValid = SAMLmetaJS.pluginEngine.executeOne(tab, 'validate', []);
 				if (typeof isValid === 'undefined') {
 				    isValid = true;
 				}
 			}
 
-			if (isValid && ui.index === 0) {  // rawmetadata tab
+			// If the content of the tab we just left is valid, move the contents to the XML
+			if (isValid && ui.index === 6) {  // rawmetadata tab
 				toXML();
 			}
+			
+						
+			
 
 			return isValid;
 		};
@@ -432,7 +474,8 @@ var SAMLmetaJS = {};
 
 		// Add content
 		var embrace = function () {
-			$(node).wrap('<div id="rawmetadata"></div>');
+			//$(node).wrap('<div id="rawmetadata"></div>');
+			//$(node).wrap('<div id="contentcontainer"></div>');
 			$(node).parent().wrap('<div id="tabs" />');
 
 			var metatab = $(node).parent();
@@ -440,16 +483,32 @@ var SAMLmetaJS = {};
 
 			var pluginTabs = {'list': [], 'content': []};
 			SAMLmetaJS.pluginEngine.execute('addTab', [pluginTabs]);
-
+			
+			tabnode.prepend('<ul>' + pluginTabs.list.join('') + '</ul>');
+/*
 			metatab.append('<div>' +
 						   '<button class="prettify">Pretty format</button>' +
 						   '<button class="wipe">Wipe</button>' +
 						   '</div>');
-
-			tabnode.prepend('<ul>' +
+*/
+/*
+			tabnode.prepend('<ul>' + pluginTabs.list.join('') +
 							'<li><a href="#rawmetadata">Metadata</a></li>' +
+							'</ul>');
+*/
+/*
+			tabnode.prepend('<ul>' + pluginTabs.list.join('') +
+							'<li><a href="#rawmetadata">Metadata</a></li>' +
+							'</ul>');
+*/
+/*
+			tabnode.prepend('<ul>' +
+							'<li><a href="#conext">Conext</a></li><li><a href="#rawmetadata">Metadata</a></li>' +
+							//'<li><a href="#rawmetadata">Metadata</a></li>' +
 							pluginTabs.list.join('') +
 							'</ul>');
+*/							
+		
 			tabnode.prepend('<div id="samlmetajs_testresults"></div>');
 			tabnode.append(pluginTabs.content.join(''));
 
@@ -487,7 +546,7 @@ var SAMLmetaJS = {};
 		if (options && options.savehook) {
 			$(options.savehook).submit(toXML);
 		}
-
+/*
 		// Adding handlers to the other buttons.
 
 		$("div#rawmetadata button.prettify").click(function(e) {
@@ -498,7 +557,7 @@ var SAMLmetaJS = {};
 			e.preventDefault();
 			$(node).val('');
 		});
-
+*/
 		SAMLmetaJS.pluginEngine.execute('setUp', []);
 	};
 
