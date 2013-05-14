@@ -40,7 +40,6 @@ div#tabs button {
 	margin: 4px; padding: 4px;
 }
 
-
 div.ui-tabs-panel ul.errors {
 	margin: 1em;
 	padding-left: 2em;
@@ -168,3 +167,4 @@ div#tabs div#certs fieldset legend {
 	background-image: url('../icons/lock.png');
 
 }
+
