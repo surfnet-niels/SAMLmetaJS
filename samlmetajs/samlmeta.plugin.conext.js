@@ -76,7 +76,7 @@
 					'<div style="float: left; width: 70%" title="SURFmarket"><textarea name="purpose" id="purpose" style="width: 100%"></textarea>' +
 					'</fieldset>';					
 					
-			// Prevoius Install
+			// Previous Install
 			conextHTML += '<fieldset><legend>Previous Install</legend>' +
 					'<div><p>An indication of level of expertise you or your organization has with setting up an SAML based service provider helps us better estimate the amount of support you may require.</p>' + 
 					'Is there any experience with setting up and maintaining a SAML2 based service provider?</div>' +

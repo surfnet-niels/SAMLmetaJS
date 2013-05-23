@@ -156,10 +156,16 @@
 
 				'</div>'
 			);
+
+            console.log("Calling addTab function of org plugin");
+
+            UI.addOrgname('en', '');
+            UI.addOrgname('nl', '');
 		},
 
 		setUp: function () {
-			$("div#org button.addname").click(function(e) {
+
+           $("div#org button.addname").click(function(e) {
 				e.preventDefault();
 				UI.addOrgname('en', '');
 				UI.addOrgname('nl', '');
