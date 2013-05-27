@@ -31,7 +31,9 @@
 		},
 
 		setUp: function () {
-			$("div#attributes button.selectall").click(function(e) {
+            //console.log("Calling setUp function of attributes plugin");
+
+            $("div#attributes button.selectall").click(function(e) {
 				e.preventDefault();
 				$("div#attributes div.content input:checkbox").each(function(index, box) {
 					$(box).attr('checked', 'checked');
@@ -46,7 +48,9 @@
 		},
 
 		fromXML: function (entitydescriptor) {
-			var attributeHTML, checked, attrname, attributes;
+            //console.log("Calling fromXML function of attributes plugin with eID " + entitydescriptor.entityid);
+
+            var attributeHTML, checked, attrname, attributes;
 			
 			
 			attributes = {};
@@ -68,7 +72,9 @@
 			$("div#attributes > div.content").append(attributeHTML);
 		},
 		toXML: function (entitydescriptor) {
-			var 
+            //console.log("Calling toXML function of attributes plugin with eID " + entitydescriptor.entityid);
+
+            var
 				atleastone = false,
 				attributes = {};
 			
@@ -97,6 +103,8 @@
 
 		},
 		validate: function () {
+            //console.log("Calling validate function of attributes plugin");
+
 			return true;  // This plugin does not allow invalid inputs
 		}
 	};
