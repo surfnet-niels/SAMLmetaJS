@@ -51,9 +51,9 @@
 					'</fieldset>';
 					
 
-			$(templateHTML).appendTo("div#conext > div.content");
+			$(templateHTML).appendTo("div#template > div.content");
 
-			$("div#conext button.addConext").click(function(e) {
+			$("div#template button.addConext").click(function(e) {
 				e.preventDefault();
 
 				UI.addConext({});
