@@ -482,6 +482,10 @@ var SAMLmetaJS = {};
 			var tabnode = $(node).parent().parent();
 
 			var pluginTabs = {'list': [], 'content': []};
+
+
+
+
 			SAMLmetaJS.pluginEngine.execute('addTab', [pluginTabs]);
 			
 			tabnode.prepend('<ul>' + pluginTabs.list.join('') + '</ul>');

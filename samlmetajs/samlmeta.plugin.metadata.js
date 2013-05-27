@@ -47,12 +47,13 @@
 			console.log("Calling addTab function of metadata plugin");			
 			
 			pluginTabs.list.push('<li><a href="#metadata">Metadata</a></li>');
-/*			pluginTabs.content.push(
+
+			pluginTabs.content.push(
 				'<div id="metadata">' +
 					'<div class="content"></div>' +
 						'<div><button class="addMetadata">Metadata Button</button></div>' +
 				'</div>'
-			);*/
+			);
 		},
 
 		// This funtion is called to create the initial content of a tab
@@ -77,6 +78,8 @@
 
 				UI.addConext({});
 			});
+
+
 			console.log("Calling Setup function of metadata plugin DONE");	
 
 		},
