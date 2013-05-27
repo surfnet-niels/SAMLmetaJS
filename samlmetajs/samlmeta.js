@@ -55,7 +55,7 @@ var SAMLmetaJS = {};
 				return;
 			}
 			if (SAMLmetaJS.plugins[plugin] && SAMLmetaJS.plugins[plugin][hook]) {
-				// console.log('Executing hook [' + hook + '] in plugin [' + plugin + ']');
+				console.log('Executing hook [' + hook + '] in plugin [' + plugin + ']');
 				return SAMLmetaJS.plugins[plugin][hook].apply(null, parameters);
 			}
 		}
@@ -382,8 +382,6 @@ var SAMLmetaJS = {};
 			if (currentTab !== 'xml') return;
 			currentTab = 'other';
 
-			console.log('fromXML()');
-
 			testEngine.reset();
 			entitydescriptor = mdreader.parseFromString($(node).val());
 			setEntityID(entitydescriptor.entityid);
@@ -402,6 +400,7 @@ var SAMLmetaJS = {};
 		// and applies this to the XML metadata document.
 		var toXML = function() {
 			if (currentTab !== 'other') return;
+
 			currentTab = 'xml';
 			console.log('toXML()');
 
@@ -433,7 +432,7 @@ var SAMLmetaJS = {};
 				setEntityID(entitydescriptor.entityid);
 				showTestResults(testEngine, showValidationLevel);
 
-				console.log(entitydescriptor);
+				//console.log(entitydescriptor);
 			}
 			// ---
 
@@ -452,7 +451,7 @@ var SAMLmetaJS = {};
 			console.log("newly selected tab id is:" + ui.index);
 			console.log("newly selected tab name is:" + nexttab);
 
-			if (tab !== 'rawmetadata') {
+			if (tab !== 'metadata') {
 				// Validate the contents of the tab we just left
 				isValid = SAMLmetaJS.pluginEngine.executeOne(tab, 'validate', []);
 				if (typeof isValid === 'undefined') {
@@ -461,14 +460,11 @@ var SAMLmetaJS = {};
 			}
 
 			// If the content of the tab we just left is valid, move the contents to the XML
-			if (isValid && ui.index === 6) {  // rawmetadata tab
+			if (isValid && ui.index === 7) {  // rawmetadata tab
 				toXML();
 			}
-			
-						
-			
-
 			return isValid;
+
 		};
 
 
@@ -482,9 +478,6 @@ var SAMLmetaJS = {};
 			var tabnode = $(node).parent().parent();
 
 			var pluginTabs = {'list': [], 'content': []};
-
-
-
 
 			SAMLmetaJS.pluginEngine.execute('addTab', [pluginTabs]);
 			
