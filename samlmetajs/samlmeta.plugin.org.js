@@ -131,7 +131,7 @@
 		addTab: function (pluginTabs) {
 			pluginTabs.list.push('<li><a href="#org">Organization</a></li>');
 			pluginTabs.content.push(
-				'<div id="org">' +
+				'<div id="org" class="tabContent">' +
 
 					'<fieldset class="name"><legend>Name of organization</legend>' +
 						'<div id="orgname"></div>' +

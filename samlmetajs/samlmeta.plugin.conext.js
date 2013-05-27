@@ -45,7 +45,7 @@
 		addTab: function (pluginTabs) {
 			pluginTabs.list.push('<li><a href="#conext">Conext</a></li>');
 			pluginTabs.content.push(
-				'<div id="conext">' +
+				'<div id="conext" class="tabContent">' +
 					'<div class="content"></div>' +
 				'</div>'
 			);

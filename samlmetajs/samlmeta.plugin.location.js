@@ -49,7 +49,7 @@
 			);
 			pluginTabs.list.push('<li><a href="#location">Location</a></li>');
 			pluginTabs.content.push(
-				'<div id="location">' +
+				'<div id="location" class="tabContent">' +
 					'<div class="content">' +
 						'<div id="map_info">' +
 							'<p><input type="checkbox" id="includeLocation" name="includeLocation" /> ' +

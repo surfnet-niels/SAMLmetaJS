@@ -32,7 +32,7 @@
 			
 			pluginTabs.list.push('<li><a href="#template">Template</a></li>');
 			pluginTabs.content.push(
-				'<div id="template">' +
+				'<div id="template" class="tabContent">' +
 					'<div class="content"></div>' +
 						'<div><button class="addTemplate">Template Button</button></div>' +
 				'</div>'

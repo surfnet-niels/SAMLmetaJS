@@ -122,7 +122,7 @@
 		addTab: function (pluginTabs) {
 			pluginTabs.list.push('<li><a href="#certs">Certificates</a></li>');
 			pluginTabs.content.push([
-				'<div id="certs">',
+				'<div id="certs" class="tabContent">',
 
 				'<div id="certificates">',
 				'<div class="content"></div>',

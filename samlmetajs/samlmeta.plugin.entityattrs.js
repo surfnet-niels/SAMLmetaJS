@@ -49,7 +49,7 @@
 		addTab: function (pluginTabs) {
 			pluginTabs.list.push('<li><a href="#entityattrs">Entity attrs</a></li>');
 			pluginTabs.content.push([
-				'<div id="entityattrs">',
+				'<div id="entityattrs" class="tabContent">',
 				'<div class="content"></div>',
 				'<div><button class="addentityattr">Add new attribute</button></div>',
 				'</div>'

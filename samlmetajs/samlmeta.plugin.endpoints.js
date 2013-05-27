@@ -166,7 +166,7 @@
 		addTab: function (pluginTabs) {
 			pluginTabs.list.push('<li><a href="#endpoints">SAML Endpoints</a></li>');
 			pluginTabs.content.push(
-				'<div id="endpoints">' +
+				'<div id="endpoints" class="tabContent">' +
 					'<div class="content"></div>' +
 					'<div><button class="addendpoint">Add new endpoint</button></div>' +
 				'</div>'

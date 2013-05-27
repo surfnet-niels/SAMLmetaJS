@@ -439,12 +439,22 @@ var SAMLmetaJS = {};
 		};
 
 		var selectTab = function (event, ui) {
-			var 
+            console.log(ui);
+
+            console.log(event);
+
+            var
 				isValid = true,
 				$tabs = $(event.target),
-				selected = $tabs.tabs("option", "selected"),
-				tab = $tabs.find('.ui-tabs-panel').eq(selected).attr('id'),
-				nexttab = $tabs.find('.ui-tabs-panel').eq(ui.index).attr('id');
+				selected = $tabs.tabs("option", "selected"), //OK
+
+//				tab = $tabs.find('.ui-tabs-panel').eq(selected).attr('id'), // Of by 1
+                tab = $tabs.find('.tabContent').eq(selected).attr('id'),
+
+//              nexttab = $tabs.find('.ui-tabs-panel').eq(ui.index).attr('id');
+                nexttab = $tabs.find('.tabContent').eq(ui.index).attr('id');
+
+            console.log($tabs.find('.ui-tabs-panel').eq(selected));
 
 			console.log("just left tab id:" + selected);			
 			console.log("just left tab name:" + tab);
@@ -452,8 +462,11 @@ var SAMLmetaJS = {};
 			console.log("newly selected tab name is:" + nexttab);
 
 			if (tab !== 'metadata') {
+                console.log("Validating tabID: " + tab);
+
 				// Validate the contents of the tab we just left
 				isValid = SAMLmetaJS.pluginEngine.executeOne(tab, 'validate', []);
+
 				if (typeof isValid === 'undefined') {
 				    isValid = true;
 				}

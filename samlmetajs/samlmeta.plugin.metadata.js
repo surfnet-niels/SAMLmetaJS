@@ -49,7 +49,7 @@
 			pluginTabs.list.push('<li><a href="#metadata">Metadata</a></li>');
 
 			pluginTabs.content.push(
-				'<div id="metadata">' +
+				'<div id="metadata" class="tabContent">' +
 					'<div>' +
                     '<button class="prettify">Pretty format</button>' +
                     '<button class="wipe">Wipe</button>' +

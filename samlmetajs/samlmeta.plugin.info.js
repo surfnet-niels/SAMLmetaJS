@@ -241,7 +241,7 @@
 		addTab: function (pluginTabs) {
 			pluginTabs.list.push('<li><a href="#info">Information</a></li>');
 			pluginTabs.content.push([
-				'<div id="info">',
+				'<div id="info" class="tabContent">',
 
 				'<fieldset class="entityid"><legend>Entity ID</legend>',
 				'<div id="div-entityid">',
