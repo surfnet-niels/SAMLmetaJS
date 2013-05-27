@@ -24,7 +24,7 @@
 				e.preventDefault();
 				$(node).val(SAMLmetaJS.XML.prettifyXML($(node).val()));
 			});
-			$("div#etadata button.wipe").click(function(e) {
+			$("div#metadata button.wipe").click(function(e) {
 				e.preventDefault();
 				$(node).val('');
 			});	
@@ -37,28 +37,40 @@
 	SAMLmetaJS.plugins.metadata = {
 		// What should happen if the tab is clicked? 	
 		tabClick: function (handler) {
-			console.log("Calling tabClick function of metadata plugin");			
+			//console.log("Calling tabClick function of metadata plugin");
 			
 			handler($("a[href='#metadata']"));
 		},
 
 		// This function is called when the tab is created
 		addTab: function (pluginTabs) {
-			console.log("Calling addTab function of metadata plugin");			
+			//console.log("Calling addTab function of metadata plugin");
 			
 			pluginTabs.list.push('<li><a href="#metadata">Metadata</a></li>');
 
 			pluginTabs.content.push(
 				'<div id="metadata">' +
-					'<div class="content"></div>' +
-						'<div><button class="addMetadata">Metadata Button</button></div>' +
+					'<div>' +
+                    '<button class="prettify">Pretty format</button>' +
+                    '<button class="wipe">Wipe</button>' +
+                    '</div>' +
 				'</div>'
 			);
-		},
+
+            // Adding handlers to the other buttons.
+            $("div#metadata button.prettify").click(function(e) {
+                e.preventDefault();
+                $(node).val(SAMLmetaJS.XML.prettifyXML($(node).val()));
+            });
+            $("div#metadata button.wipe").click(function(e) {
+                e.preventDefault();
+                $(node).val('');
+            });
+        },
 
 		// This funtion is called to create the initial content of a tab
 		setUp: function () {
-			console.log("Calling Setup function of metadata plugin");			
+			//console.log("Calling Setup function of metadata plugin");
 			
 			var metadataHTML = "";
 			
@@ -80,24 +92,24 @@
 			});
 
 
-			console.log("Calling Setup function of metadata plugin DONE");	
+			//console.log("Calling Setup function of metadata plugin DONE");
 
 		},
 
 		fromXML: function () {
 			// This function is called whenever a tab is being accessed. It should fill content element based on XML metadata
-			console.log("Calling fromXML function of metadata plugin");
+			//console.log("Calling fromXML function of metadata plugin");
 		},
 
 		toXML: function () {
 			// This function is called whenever a tab is left accessed(if another tab is selected). 
 			// It should use content elements to create XML metadata, likely after validation
-			console.log("Calling toXML function of metadata plugin");
+			//console.log("Calling toXML function of metadata plugin");
 		},
 		
 		validate: function () {
 			// Validat the contents of this tab
-			console.log("Calling validate function of template plugin");			
+			//console.log("Calling validate function of template plugin");
 						
 			return true;
 		}
