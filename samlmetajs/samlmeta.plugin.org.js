@@ -157,7 +157,7 @@
 				'</div>'
 			);
 
-            console.log("Calling addTab function of org plugin");
+            //console.log("Calling addTab function of org plugin");
 
             UI.addOrgname('en', '');
             UI.addOrgname('nl', '');
@@ -183,7 +183,9 @@
 		},
 
 		fromXML: function (entitydescriptor) {
-			var l;
+            //console.log("Calling fromXML function of org plugin");
+
+            var l;
 
 			UI.clearOrgname();
 			UI.clearOrgdisplayname();
@@ -216,7 +218,9 @@
 		},
 
 		toXML: function (entitydescriptor) {
-			var
+            //console.log("Calling toXML function of org plugin");
+
+            var
 				include = false,
 				org = {};
 
