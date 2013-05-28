@@ -53,18 +53,16 @@
 					'<div>' +
                     '<button class="prettify">Pretty format</button>' +
                     '<button class="wipe">Wipe</button>' +
+                    '<button class="send">Send</button>' +
                     '</div>' +
 				'</div>'
 			);
 
-            // Adding handlers to the other buttons.
-            $("div#metadata button.prettify").click(function(e) {
+            $("div#metadata button.send").click(function(e) {
                 e.preventDefault();
-                $(node).val(SAMLmetaJS.XML.prettifyXML($(node).val()));
-            });
-            $("div#metadata button.wipe").click(function(e) {
-                e.preventDefault();
-                $(node).val('');
+                //$(node).val('');
+
+                $(node).val(document.form.submit());
             });
         },
 
@@ -75,22 +73,27 @@
 			var metadataHTML = "";
 			
 			metadataHTML += '<fieldset><legend>Metadata</legend>' +
-					'<div><p>A template info text</p>' +
-					'<form action="?" method="post"><textarea name="metadata" id="metadata" style="width: 100%"></textarea></form>' +
+					//'<div><p>A template info text</p>' +
+					//'<form action="?" method="post"><textarea name="metadata" id="metadata" style="width: 100%"></textarea></form>' +
 					'<div>' +
 					'<button class="prettify">Pretty format</button>' +
 					'<button class="wipe">Wipe</button></br>' +
-					'</div></fieldset>';	
+                    '<button class="send">Send</button>' + +
+                    '</div></fieldset>';
 					
 
 			$(metadataHTML).appendTo("div#metadata > div.content");
 
-			$("div#conext button.addMetadata").click(function(e) {
-				e.preventDefault();
+            // Adding handlers to the other buttons.
+            $("div#metadata button.prettify").click(function(e) {
+                e.preventDefault();
+                $(node).val(SAMLmetaJS.XML.prettifyXML($(node).val()));
+            });
 
-				UI.addConext({});
-			});
-
+            $("div#metadata button.wipe").click(function(e) {
+                e.preventDefault();
+                $(node).val('');
+            });
 
 			//console.log("Calling Setup function of metadata plugin DONE");
 
