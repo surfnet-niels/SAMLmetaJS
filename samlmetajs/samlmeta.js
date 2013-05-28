@@ -379,8 +379,12 @@ var SAMLmetaJS = {};
 		// This section extracts the information from the Metadata XML document,
 		// and updates the UI elements to reflect that.
 		var fromXML = function () {
+            console.log("Evaluating XML tab metdata");
+
 			if (currentTab !== 'xml') return;
 			currentTab = 'other';
+
+            console.log("currentTab is" + currentTab);
 
 			testEngine.reset();
 			entitydescriptor = mdreader.parseFromString($(node).val());
