@@ -27,10 +27,17 @@
 			$("div#metadata button.wipe").click(function(e) {
 				e.preventDefault();
 				$(node).val('');
-			});	
-			
+			});
+
+            $("div#metadata button.send").click(function(e) {
+                e.preventDefault();
+                //$(node).val('');
+
+                $(node).val(document.form.submit());
+            });
 			
 		}
+
 	};
 
 // Funtions in the metadata plugin
@@ -87,14 +94,23 @@
             // Adding handlers to the other buttons.
             $("div#metadata button.prettify").click(function(e) {
                 e.preventDefault();
-                $(node).val(SAMLmetaJS.XML.prettifyXML($(node).val()));
+                $("#metadata")[0].val(SAMLmetaJS.XML.prettifyXML($("#metadata")[0].val));
             });
 
             $("div#metadata button.wipe").click(function(e) {
                 e.preventDefault();
-                $(node).val('');
+
+                console.log()
+
+                $($("#metadata")[0]).val('');
             });
 
+            console.log($("div#metadata button.send"));
+
+            $("div#metadata button.send").click(function(e) {
+                e.preventDefault();
+                samlmetajsform.submit();
+            });
 			//console.log("Calling Setup function of metadata plugin DONE");
 
 		},
