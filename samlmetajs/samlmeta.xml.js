@@ -228,8 +228,6 @@ SAMLmetaJS.xmlupdater = function(xmlstring) {
 					{'localName': 'AttributeConsumingService', 'namespaceURI': SAMLmetaJS.Constants.ns.md}
 				]
 			));
-
-
 		},
 
 		"addContact": function(node, contact) {
