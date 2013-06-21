@@ -168,7 +168,6 @@ var SAMLmetaJS = {};
 			'urn:oid:0.9.2342.19200300.100.1.3': 'mail',
 			'urn:oid:1.3.6.1.4.1.5923.1.1.1.1': 'eduPersonAffiliation',
 			'urn:oid:1.3.6.1.4.1.5923.1.1.1.10': 'eduPersonTargetedID',
-			'urn:oid:1.3.6.1.4.1.5923.1.1.1.2': 'eduPersonNickname',
 			'urn:oid:1.3.6.1.4.1.5923.1.1.1.6': 'eduPersonPrincipalName',
 			'urn:oid:1.3.6.1.4.1.5923.1.1.1.7': 'eduPersonEntitlement',
 			'urn:oid:1.3.6.1.4.1.5923.1.5.1.1': 'isMemberOf',
@@ -179,7 +178,7 @@ var SAMLmetaJS = {};
 			'urn:oid:2.5.4.42': 'givenName'
 
 			/*
-			'urn:oid:0.9.2342.19200300.100.1.1': 'uid',
+            'urn:oid:0.9.2342.19200300.100.1.1': 'uid',
 			'urn:oid:0.9.2342.19200300.100.1.10': 'manager',
 			'urn:oid:0.9.2342.19200300.100.1.2': 'textEncodedORAddress',
 			'urn:oid:0.9.2342.19200300.100.1.20': 'homePhone',
@@ -342,7 +341,7 @@ var SAMLmetaJS = {};
 		var
 			currentTab = 'xml',
 			mdreaderSetup = undefined,
-			showValidation = false,
+			showValidation = true,
 			showValidationLevel = {
 				'info': true,
 				'warning': true,
@@ -560,7 +559,7 @@ var SAMLmetaJS = {};
 		if (options && options.savehook) {
 			$(options.savehook).submit(toXML);
 		}
-/*
+
 		// Adding handlers to the other buttons.
 
 		$("div#rawmetadata button.prettify").click(function(e) {
@@ -571,7 +570,7 @@ var SAMLmetaJS = {};
 			e.preventDefault();
 			$(node).val('');
 		});
-*/
+
 		SAMLmetaJS.pluginEngine.execute('setUp', []);
 	};
 
