@@ -300,26 +300,32 @@
 			$("div#info button.addname").click(function(e) {
 				e.preventDefault();
 				UI.addInfoname('en', '');
+                UI.addInfoname('nl', '');
 			});
 			$("div#info button.adddescr").click(function(e) {
 				e.preventDefault();
 				UI.addInfodescr('en', '');
+                UI.addInfodescr('nl', '');
 			});
 			$("div#info button.addlogo").click(function(e) {
 				e.preventDefault();
-				UI.addInfologo('', '');
+				UI.addInfologo('en', '');
+                UI.addInfologo('nl', '');
 			});
 			$("div#info button.addkeywords").click(function(e) {
 				e.preventDefault();
 				UI.addInfokeywords('en', '');
+                UI.addInfokeywords('nl', '');
 			});
 			$("div#info button.addinformationurl").click(function(e) {
 				e.preventDefault();
 				UI.addInformationURL('en', '');
+                UI.addInformationURL('nl', '');
 			});
 			$("div#info button.addprivacystatementurl").click(function(e) {
 				e.preventDefault();
 				UI.addPrivacyStatementURL('en', '');
+                UI.addPrivacyStatementURL('nl', '');
 			});
 			$("div#info button.showHelp").click(function(e) {
 				e.preventDefault();
