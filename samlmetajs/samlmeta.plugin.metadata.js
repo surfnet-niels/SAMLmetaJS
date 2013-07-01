@@ -99,13 +99,8 @@
 
             $("div#metadata button.wipe").click(function(e) {
                 e.preventDefault();
-
-                console.log()
-
                 $($("#metadata")[0]).val('');
             });
-
-            console.log($("div#metadata button.send"));
 
             $("div#metadata button.send").click(function(e) {
                 e.preventDefault();
