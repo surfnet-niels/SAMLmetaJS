@@ -242,8 +242,7 @@ var SAMLmetaJS = {};
 			'urn:oid:2.5.4.41': 'name',
 			'urn:oid:2.5.4.42': 'givenName',
 			'urn:oid:2.5.4.7': 'l',
-			'urn:oid:2.5.4.9': 'street'
-			*/
+			'urn:oid:2.5.4.9': 'street'*/
 		},
 		'attributeDescriptions' : {
 			'urn:oid:0.9.2342.19200300.100.1.1': 'I am a uid',
@@ -378,18 +377,12 @@ var SAMLmetaJS = {};
 		// This section extracts the information from the Metadata XML document,
 		// and updates the UI elements to reflect that.
 		var fromXML = function () {
-            console.log("Evaluating XML tab metdata");
-
 			if (currentTab !== 'xml') return;
 			currentTab = 'other';
-
-            console.log("currentTab is" + currentTab);
 
 			testEngine.reset();
 			entitydescriptor = mdreader.parseFromString($(node).val());
 			setEntityID(entitydescriptor.entityid);
-
-			console.log(entitydescriptor);
 
 			if (showValidation === true) {
 				showTestResults(testEngine, showValidationLevel);
@@ -413,7 +406,7 @@ var SAMLmetaJS = {};
 
 			SAMLmetaJS.pluginEngine.execute('toXML', [entitydescriptor]);
 
-			console.log(entitydescriptor);
+			//console.log(entitydescriptor);
 
 			// ---
 			// Now the JSON object is created, and now we will apply this to the Metadata XML document
@@ -442,10 +435,6 @@ var SAMLmetaJS = {};
 		};
 
 		var selectTab = function (event, ui) {
-            console.log(ui);
-
-            console.log(event);
-
             var
 				isValid = true,
 				$tabs = $(event.target),
@@ -457,12 +446,10 @@ var SAMLmetaJS = {};
 //              nexttab = $tabs.find('.ui-tabs-panel').eq(ui.index).attr('id');
                 nexttab = $tabs.find('.tabContent').eq(ui.index).attr('id');
 
-            console.log($tabs.find('.ui-tabs-panel').eq(selected));
-
-			console.log("just left tab id:" + selected);			
-			console.log("just left tab name:" + tab);
-			console.log("newly selected tab id is:" + ui.index);
-			console.log("newly selected tab name is:" + nexttab);
+//			console.log("just left tab id:" + selected);
+//			console.log("just left tab name:" + tab);
+//			console.log("newly selected tab id is:" + ui.index);
+//			console.log("newly selected tab name is:" + nexttab);
 
 			if (tab !== 'metadata') {
                 console.log("Validating tabID: " + tab);
