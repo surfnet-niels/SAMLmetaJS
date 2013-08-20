@@ -87,7 +87,8 @@
 			pluginTabs.list.push('<li><a href="#saml2sp">SAML Endpoints</a></li>');
 			pluginTabs.content.push(
 				'<div id="saml2sp" class="tabContent">' +
-					'<div class="content"></div>' +
+                    '<div><p>Please provide some information of SAML endpoint of your Service.</div>' +
+                    '<div class="content"></div>' +
 					'<div><button class="addendpoint">Add new endpoint</button></div>' +
 				'</div>'
 			);

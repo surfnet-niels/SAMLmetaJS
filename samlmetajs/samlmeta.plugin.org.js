@@ -133,6 +133,8 @@
 			pluginTabs.content.push(
 				'<div id="org" class="tabContent">' +
 
+                    '<div><p>Please provide some information of your organisation. You MUST provide information in English; you MAY provide information in Dutch.<br>We prefer if you supply information in both languages, if you cannot provide Dutch, please remove the fields before you continue to the next tab.</p></div>' +
+
 					'<fieldset class="name"><legend>Name of organization</legend>' +
 						'<div id="orgname"></div>' +
 						'<div>' +

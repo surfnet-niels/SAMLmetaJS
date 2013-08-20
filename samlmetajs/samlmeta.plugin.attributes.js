@@ -18,7 +18,7 @@
 			pluginTabs.list.push('<li><a href="#attributes">User attrs</a></li>');
 			pluginTabs.content.push(
 				'<div id="attributes" class="tabContent">' +
-
+                    '<div><p>Please select the attributes you require for your service.<br>Attributes are passed along with the authentication to provide additional information on a user.<br>Please note that the request of attributes must be in line with the purpose of the service.</div>' +
 					'<div class="content"></div>' +
 
 					'<div>' +

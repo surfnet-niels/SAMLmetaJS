@@ -60,7 +60,8 @@
 		addTab: function (pluginTabs) {
 			pluginTabs.list.push('<li><a href="#contact">Contacts</a></li>');
 			pluginTabs.content.push(
-				'<div id="contact" class="tabContent">' +
+                '<div id="contact" class="tabContent">' +
+                    '<div><p>Please provide some contect information.<br>If you are requesting a test connection, only a technical contact type is required.<br>For a production connection, a technical, administrative and support contact is required.</p></div>' +
 					'<div class="content"></div>' +
 					'<div><button class="addcontact">Add new contact</button></div>' +
 				'</div>'

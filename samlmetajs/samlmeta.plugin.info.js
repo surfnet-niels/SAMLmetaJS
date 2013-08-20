@@ -242,10 +242,10 @@
 			pluginTabs.list.push('<li><a href="#info">Information</a></li>');
 			pluginTabs.content.push([
 				'<div id="info" class="tabContent">',
-
+                '<div><p>Please provide some information of your service. You MUST provide information in English; you MAY provide information in Dutch.<br>We prefer if you supply information in both languages, if you cannot provide Dutch, please remove the fields before you continue to the next tab.</p></div>' +
 				'<fieldset class="entityid"><legend>Entity ID</legend>',
 				'<div id="div-entityid">',
-				'<input style="width: 600px" type="text" name="entityid" id="entityid" value="" /><img src="samlmetajs/icons/help.png">',
+				'<input style="width: 600px" type="text" name="entityid" id="entityid" value="" />',
 				'<p style="margin: 0px">The format MUST be an URI.</p>',
 				'</div>',
 				'</fieldset>',
