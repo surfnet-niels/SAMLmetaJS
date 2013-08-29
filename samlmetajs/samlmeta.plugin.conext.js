@@ -94,10 +94,10 @@
 					'<div><p>An indication of level of expertise you have with setting up an SAML based service provider helps us to better estimate the amount of support you may require.</p>' +
 					'Is there any experience with setting up and maintaining a SAML2 based service provider?</div>' +
 					'<div style="float: left; width: 70%" title="SURFmarket">' +
-					'<input type="checkbox" id="yes_previous_install" name="yes_previous_install" />' +
+					'<input type="checkbox" id="yes" name="yes" />' +
 					'<label for="yes_previous_install">Yes, I have previously installed or maintain a SAML2 based Service Provider</label>' +
 					'</br>' +					
-					'<input type="checkbox" id="no_previous_install" name="no_previous_install" />' +
+					'<input type="checkbox" id="no" name="no" />' +
 					'<label for="no_previous_install">No experience with SAML2 SP software</label>' +
 					'</fieldset>';
 
@@ -116,10 +116,10 @@
 					'Please note that a production connection cannot be established without a signed SURFconext contract and optionally a license agreement</p>' +
 					'Are you requesting a Test or a Production connection?</div>' +
 					'<div style="float: left; width: 70%" title="SURFmarket">' +
-					'<input type="checkbox" id="connection_is_test" name="connection_is_test" />' +
+					'<input type="checkbox" id="test" name="test" />' +
 					'<label for="connection_is_test">I want to make a test connection</label>' +					
 					'</br>' +					
-					'<input type="checkbox" id="connection_is_prod" name="connection_is_prod" />' +
+					'<input type="checkbox" id="prod" name="prod" />' +
 					'<label for="connection_is_prod">I want to make a production connection</label>' +
 					'</fieldset>';	
 					
@@ -177,7 +177,7 @@
                 });
                 newConextData.push(cArr);
             });
-
+            
             // purpose
             $('div#conext fieldset#purpose').each(function (index, element) {
                 pArr = new Array();
@@ -224,17 +224,31 @@
                 newConextData.push(plArr);
             });
 
-            //console.log(newConextData);
 
-            entitydescriptor.conextData.push(newConextData);
+            console.log($(newConextData));
+            
+            var blkstr = [];
+            $.each(newConextData, function(idx2,val2) {                    
+                 var str = idx2 + ":" + val2;
+                 blkstr.push(str);
+                 
+                 $.each(newConextData, function(idx2,val2) {                    
+                     var str = idx2 + ":" + val2;
+                     blkstr.push(str);
+                });
+            });
+            console.log(blkstr.join(", "));
 
- //           console.log($("#conextdata"));
+            //entitydescriptor.conextData.push(newConextData);
+
+            //console.log($("#conextdata"));
  //           $("#conextdata")[0].attr('value')="test123";
 
-            var textarea = document.getElementById("conextdata");
-            textarea.value = newConextData.join("\n");
+            var conexttextarea = document.getElementById("conextdata");
+                        
+            //textarea.value = newConextData.join("\n");
 
-            console.log($("#conextdata"));
+            //console.log($("#conextdata"));
 		},
 		
 		validate: function () {
