@@ -164,19 +164,21 @@ var SAMLmetaJS = {};
 			'urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol': 'Discovery Response'
 		},
 		'attributes' : {
-			'urn:oid:1.3.6.1.4.1.1466.115.121.1.15': 'uid<br>&nbsp;&nbsp;&nbsp;&nbsp;(urn:oid:0.9.2342.19200300.100.1.1)<br>&nbsp;&nbsp;&nbsp;&nbsp;(urn:mace:dir:attribute-def:uid)',
-			'urn:oid:0.9.2342.19200300.100.1.3': 'mail<br>&nbsp;&nbsp;&nbsp;&nbsp;(urn:oid:0.9.2342.19200300.100.1.3)<br>&nbsp;&nbsp;&nbsp;&nbsp;(urn:mace:dir:attribute-def:mail)',
-			'urn:oid:1.3.6.1.4.1.5923.1.1.1.1': 'eduPersonAffiliation<br>&nbsp;&nbsp;&nbsp;&nbsp;(urn:oid:1.3.6.1.4.1.5923.1.1.1.1)<br>&nbsp;&nbsp;&nbsp;&nbsp;(urn:mace:dir:attribute-def:eduPersonAffiliation)',
-			'urn:oid:1.3.6.1.4.1.5923.1.1.1.10': 'eduPersonTargetedID<br>&nbsp;&nbsp;&nbsp;&nbsp;(urn:oid:1.3.6.1.4.1.5923.1.1.1.10)<br>&nbsp;&nbsp;&nbsp;&nbsp;(urn:mace:dir:attribute-def:eduPersonTargetedID)',
-			'urn:oid:1.3.6.1.4.1.5923.1.1.1.6': 'eduPersonPrincipalName<br>&nbsp;&nbsp;&nbsp;&nbsp;(urn:oid:1.3.6.1.4.1.5923.1.1.1.6)<br>&nbsp;&nbsp;&nbsp;&nbsp;(urn:mace:dir:attribute-def:eduPersonPrincipalName )',
-			'urn:oid:1.3.6.1.4.1.5923.1.1.1.7': 'eduPersonEntitlement',
-			'urn:oid:1.3.6.1.4.1.5923.1.5.1.1': 'isMemberOf',
-			'urn:oid:2.16.840.1.113730.3.1.241': 'displayName',
-			'urn:oid:2.5.4.3': 'cn',
-			'urn:oid:2.5.4.4': 'sn',
-			'urn:oid:2.5.4.41': 'name',
-			'urn:oid:2.5.4.42': 'givenName'
-
+			'urn:oid:0.9.2342.19200300.100.1.1': '<b>UID</b><br>&nbsp;&nbsp;&nbsp;&nbsp;(urn:oid:0.9.2342.19200300.100.1.1)<br>&nbsp;&nbsp;&nbsp;&nbsp;(urn:mace:dir:attribute-def:uid)<br>&nbsp;',
+			'urn:oid:0.9.2342.19200300.100.1.3': '<b>Mail</b><br>&nbsp;&nbsp;&nbsp;&nbsp;(urn:oid:0.9.2342.19200300.100.1.3)<br>&nbsp;&nbsp;&nbsp;&nbsp;(urn:mace:dir:attribute-def:mail)<br>&nbsp;',
+			'urn:oid:2.16.840.1.113730.3.1.241': '<b>Display Name</b><br>&nbsp;&nbsp;&nbsp;&nbsp;(urn:oid:2.16.840.1.113730.3.1.241)<br>&nbsp;&nbsp;&nbsp;&nbsp;(urn:mace:dir:attribute-def:displayName)<br>&nbsp;',
+			'urn:oid:2.5.4.3': '<b>Common Name</b><br>&nbsp;&nbsp;&nbsp;&nbsp;(urn:oid:2.5.4.3)<br>&nbsp;&nbsp;&nbsp;&nbsp;(urn:mace:dir:attribute-def:cn)<br>&nbsp;',
+			'urn:oid:2.5.4.4': '<b>Surname</b><br>&nbsp;&nbsp;&nbsp;&nbsp;(urn:oid:2.5.4.4)<br>&nbsp;&nbsp;&nbsp;&nbsp;(urn:mace:dir:attribute-def:sn)<br>&nbsp;',
+			'urn:oid:2.5.4.42': '<b>Given Name</b><br>&nbsp;&nbsp;&nbsp;&nbsp;(urn:oid:2.5.4.42)<br>&nbsp;&nbsp;&nbsp;&nbsp;(urn:mace:dir:attribute-def:givenName)<br>&nbsp;',
+			'urn:oid:1.3.6.1.4.1.5923.1.1.1.1': '<b>eduPersonAffiliation</b><br>&nbsp;&nbsp;&nbsp;&nbsp;(urn:oid:1.3.6.1.4.1.5923.1.1.1.1)<br>&nbsp;&nbsp;&nbsp;&nbsp;(urn:mace:dir:attribute-def:eduPersonAffiliation)<br>&nbsp;',
+			'urn:oid:1.3.6.1.4.1.5923.1.1.1.10': '<b>eduPersonTargetedID</b><br>&nbsp;&nbsp;&nbsp;&nbsp;(urn:oid:1.3.6.1.4.1.5923.1.1.1.10)<br>&nbsp;&nbsp;&nbsp;&nbsp;(urn:mace:dir:attribute-def:eduPersonTargetedID)<br>&nbsp;',
+			'urn:oid:1.3.6.1.4.1.5923.1.1.1.6': '<b>eduPersonPrincipalName</b><br>&nbsp;&nbsp;&nbsp;&nbsp;(urn:oid:1.3.6.1.4.1.5923.1.1.1.6)<br>&nbsp;&nbsp;&nbsp;&nbsp;(urn:mace:dir:attribute-def:eduPersonPrincipalName)<br>&nbsp;',
+			'urn:oid:1.3.6.1.4.1.5923.1.1.1.7': '<b>eduPersonEntitlement</b><br>&nbsp;&nbsp;&nbsp;&nbsp;(urn:oid:1.3.6.1.4.1.5923.1.1.1.7)<br>&nbsp;&nbsp;&nbsp;&nbsp;(urn:mace:dir:attribute-def:eduPersonEntitlement)<br>&nbsp;',
+			'urn:oid:1.3.6.1.4.1.5923.1.5.1.1': '<b>isMemberOf</b><br>&nbsp;&nbsp;&nbsp;&nbsp;(urn:oid:1.3.6.1.4.1.5923.1.5.1.1)<br>&nbsp;&nbsp;&nbsp;&nbsp;(urn:mace:dir:attribute-def:eduPersonEntitlement)<br>&nbsp;',
+			'urn:oid:1.3.6.1.4.1.25178.1.2.9': '<b>Home Organisation</b><br>&nbsp;&nbsp;&nbsp;&nbsp;(urn:oid:1.3.6.1.4.1.25178.1.2.9)<br>&nbsp;&nbsp;&nbsp;&nbsp;(urn:mace:terena.org:attribute-def:schacHomeOrganization)<br>&nbsp;',
+			'urn:oid:1.3.6.1.4.1.25178.1.2.10': '<b>Home Organisation Type</b><br>&nbsp;&nbsp;&nbsp;&nbsp;(urn:oid:1.3.6.1.4.1.25178.1.2.9)<br>&nbsp;&nbsp;&nbsp;&nbsp;(urn:mace:terena.org:attribute-def:schacHomeOrganizationType)<br>&nbsp;',
+			'urn:oid:2.16.840.1.113730.3.1.39': '<b>Preferred Language</b><br>&nbsp;&nbsp;&nbsp;&nbsp;(urn:oid:1.3.6.1.4.1.25178.1.2.9)<br>&nbsp;&nbsp;&nbsp;&nbsp;(urn:mace:terena.org:attribute-def:schacHomeOrganization)<br>&nbsp;',
+			
 			/*
             'urn:oid:0.9.2342.19200300.100.1.1': 'uid',
 			'urn:oid:0.9.2342.19200300.100.1.10': 'manager',
@@ -245,19 +247,21 @@ var SAMLmetaJS = {};
 			'urn:oid:2.5.4.9': 'street'*/
 		},
 		'attributeDescriptions' : {
-			'urn:oid:1.3.6.1.4.1.1466.115.121.1.15': 'The unique code for a person that is used as the login name within the institution.',
-			'urn:oid:0.9.2342.19200300.100.1.3': 'I am a mail address',
-			'urn:oid:1.3.6.1.4.1.5923.1.1.1.1': 'I am an eduPersonAffiliation',
-			'urn:oid:1.3.6.1.4.1.5923.1.1.1.10': 'I am an eduPersonTargetedID',
-			'urn:oid:1.3.6.1.4.1.5923.1.1.1.2': 'I am an eduPersonNickname',
-			'urn:oid:1.3.6.1.4.1.5923.1.1.1.6': 'I am an eduPersonPrincipalName',
-			'urn:oid:1.3.6.1.4.1.5923.1.1.1.7': 'I am an eduPersonEntitlement',
-			'urn:oid:1.3.6.1.4.1.5923.1.5.1.1': 'I am an isMemberOf',
-			'urn:oid:2.16.840.1.113730.3.1.241': 'I am an displayName',
-			'urn:oid:2.5.4.3': 'I am an cn',
-			'urn:oid:2.5.4.4': 'I am an sn',
-			'urn:oid:2.5.4.41': 'I am an name',
-			'urn:oid:2.5.4.42': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nulla ipsum, laoreet id blandit eu, mollis quis ligula. Nam lorem magna, auctor sit amet pharetra sed, varius id leo. Praesent in ipsum sit amet diam pellentesque mattis vel non lorem. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Praesent et tempor justo. Duis magna metus, tempor ut mollis non, cursus non nisi. Duis porta nunc id ipsum luctus porttitor. '
+			'urn:oid:0.9.2342.19200300.100.1.1': 'UID: The unique code for a person that is used as the login name within the institution.',
+			'urn:oid:0.9.2342.19200300.100.1.3': 'Mail: The mail (rfc822mailbox) attribute type holds Internet mail addresses in Mailbox [RFC2821] form (e.g., user@example.com).',
+			'urn:oid:2.16.840.1.113730.3.1.241': 'Display Name: Preferred name of a person to be used when displaying entries',
+			'urn:oid:2.5.4.3': 'Common Name: Contains names of an object. Typically the person\'s full name.',
+			'urn:oid:2.5.4.4': 'Surname: Surname or family name.',
+			'urn:oid:2.5.4.42': 'Given Name: The part of a person\'s name that is not their surname.',
+			'urn:oid:1.3.6.1.4.1.5923.1.1.1.1': 'eduPersonAffiliation: Specifies the person\'s relationship(s) to the institution in broad categories such as student, employee, staff, etc.',
+			'urn:oid:1.3.6.1.4.1.5923.1.1.1.10': 'eduPersonTargetedID: A persistent, non-reassigned, opaque identifier for a principal.',
+			'urn:oid:1.3.6.1.4.1.5923.1.1.1.6': 'eduPersonPrincipalName: A scoped identifier for a person. It should be represented in the form "user@scope" where "user" is a name-based identifier for the person and where "scope" defines a local security domain. NOT an email adress!',
+			'urn:oid:1.3.6.1.4.1.5923.1.1.1.7': 'eduPersonEntitlement: URI (either URN or URL) that indicates a set of rights to specific resources.',
+			'urn:oid:1.3.6.1.4.1.5923.1.5.1.1': 'isMemberOf: An "isMemberOf" attribute associated with an entity is a collection of values each of which identifies a group in which that entity is a member.',
+			'urn:oid:1.3.6.1.4.1.25178.1.2.9': 'Home Organisation: Specifies a person\'s home organization using the domain name (RFC 1035) of the organization',
+			'urn:oid:1.3.6.1.4.1.25178.1.2.10': 'Home Organisation Type: Type of a Home Organization',
+			'urn:oid:2.16.840.1.113730.3.1.39': 'Preferred Language: Used to indicate an individual\'s preferred written or spoken language',
+			
 		},
 	};
 

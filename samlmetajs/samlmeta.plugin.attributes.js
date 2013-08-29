@@ -63,7 +63,7 @@
 			for(attrname in SAMLmetaJS.Constants.attributes) {
 				if (SAMLmetaJS.Constants.attributes.hasOwnProperty(attrname)) {
 					checked = (attributes[attrname] ? 'checked="checked"' : '');
-					attributeHTML += '<div style="float: left; width: 300px" title="Hello ' + SAMLmetaJS.Constants.attributeDescriptions[attrname] +'"><input type="checkbox" id="' + attrname + '-id" name="' + attrname + '" ' + checked + '/>' +
+					attributeHTML += '<div style="float: left; width: 400px" title="' +SAMLmetaJS.Constants.attributeDescriptions[attrname] +'"><input type="checkbox" id="' + attrname + '-id" name="' + attrname + '" ' + checked + '/>' +
 						'<label for="' + attrname + '-id">' + SAMLmetaJS.Constants.attributes[attrname] + '</label></div>';
 				}
 			}
