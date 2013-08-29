@@ -164,11 +164,11 @@ var SAMLmetaJS = {};
 			'urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol': 'Discovery Response'
 		},
 		'attributes' : {
-			'urn:oid:0.9.2342.19200300.100.1.1': 'uid',
-			'urn:oid:0.9.2342.19200300.100.1.3': 'mail',
-			'urn:oid:1.3.6.1.4.1.5923.1.1.1.1': 'eduPersonAffiliation',
-			'urn:oid:1.3.6.1.4.1.5923.1.1.1.10': 'eduPersonTargetedID',
-			'urn:oid:1.3.6.1.4.1.5923.1.1.1.6': 'eduPersonPrincipalName',
+			'urn:oid:1.3.6.1.4.1.1466.115.121.1.15': 'uid<br>&nbsp;&nbsp;&nbsp;&nbsp;(urn:oid:0.9.2342.19200300.100.1.1)<br>&nbsp;&nbsp;&nbsp;&nbsp;(urn:mace:dir:attribute-def:uid)',
+			'urn:oid:0.9.2342.19200300.100.1.3': 'mail<br>&nbsp;&nbsp;&nbsp;&nbsp;(urn:oid:0.9.2342.19200300.100.1.3)<br>&nbsp;&nbsp;&nbsp;&nbsp;(urn:mace:dir:attribute-def:mail)',
+			'urn:oid:1.3.6.1.4.1.5923.1.1.1.1': 'eduPersonAffiliation<br>&nbsp;&nbsp;&nbsp;&nbsp;(urn:oid:1.3.6.1.4.1.5923.1.1.1.1)<br>&nbsp;&nbsp;&nbsp;&nbsp;(urn:mace:dir:attribute-def:eduPersonAffiliation)',
+			'urn:oid:1.3.6.1.4.1.5923.1.1.1.10': 'eduPersonTargetedID<br>&nbsp;&nbsp;&nbsp;&nbsp;(urn:oid:1.3.6.1.4.1.5923.1.1.1.10)<br>&nbsp;&nbsp;&nbsp;&nbsp;(urn:mace:dir:attribute-def:eduPersonTargetedID)',
+			'urn:oid:1.3.6.1.4.1.5923.1.1.1.6': 'eduPersonPrincipalName<br>&nbsp;&nbsp;&nbsp;&nbsp;(urn:oid:1.3.6.1.4.1.5923.1.1.1.6)<br>&nbsp;&nbsp;&nbsp;&nbsp;(urn:mace:dir:attribute-def:eduPersonPrincipalName )',
 			'urn:oid:1.3.6.1.4.1.5923.1.1.1.7': 'eduPersonEntitlement',
 			'urn:oid:1.3.6.1.4.1.5923.1.5.1.1': 'isMemberOf',
 			'urn:oid:2.16.840.1.113730.3.1.241': 'displayName',
@@ -245,7 +245,7 @@ var SAMLmetaJS = {};
 			'urn:oid:2.5.4.9': 'street'*/
 		},
 		'attributeDescriptions' : {
-			'urn:oid:0.9.2342.19200300.100.1.1': 'I am a uid',
+			'urn:oid:1.3.6.1.4.1.1466.115.121.1.15': 'The unique code for a person that is used as the login name within the institution.',
 			'urn:oid:0.9.2342.19200300.100.1.3': 'I am a mail address',
 			'urn:oid:1.3.6.1.4.1.5923.1.1.1.1': 'I am an eduPersonAffiliation',
 			'urn:oid:1.3.6.1.4.1.5923.1.1.1.10': 'I am an eduPersonTargetedID',
