@@ -171,80 +171,55 @@
             // contract
             $('div#conext fieldset#contract').each(function (index, element) {
                 cArr = new Array();
-                cArr["contract"] = new Array();
-                    $(element).find('input:checked').each(function(index2, element2) {
-                        cArr["contract"].push($(element2).attr('name'));
+                $(element).find('input:checked').each(function(index2, element2) {
+                	cArr.push($(element2).attr('name'));
                 });
-                newConextData.push(cArr);
+                newConextData["contract"] = cArr;
             });
-            
+        
             // purpose
             $('div#conext fieldset#purpose').each(function (index, element) {
-                pArr = new Array();
-                pArr["purpose"] = $(element).find('textarea#purpose').eq(0).attr('value');
-                newConextData.push(pArr);
+                //pArr = new Array();
+                //pArr["purpose"] = $(element).find('textarea#purpose').eq(0).attr('value');
+                newConextData["purpose"] = $(element).find('textarea#purpose').eq(0).attr('value');
             });
 
             // experience
             $('div#conext fieldset#experience').each(function (index, element) {
                 eArr = new Array();
-                eArr["experience"] = new Array();
                 $(element).find('input:checked').each(function(index2, element2) {
-                    eArr["experience"].push($(element2).attr('name'));
+                    eArr.push($(element2).attr('name'));
                 });
-                newConextData.push(eArr);
+                newConextData["experience"] = eArr;
             });
 
             // customers
             $('div#conext fieldset#customers').each(function (index, element) {
-                //console.log($(element));
-
-                cuArr = new Array();
-                cuArr["customers"] = $(element).find('textarea#customers').eq(0).attr('value');
-                newConextData.push(cuArr);
+                newConextData["customers"] = $(element).find('textarea#customers').eq(0).attr('value');
             });
 
             // state
             $('div#conext fieldset#state').each(function (index, element) {
                 sArr = new Array();
-                sArr["state"] = new Array();
                 $(element).find('input:checked').each(function(index2, element2) {
-                    sArr["state"].push($(element2).attr('name'));
+                    sArr.push($(element2).attr('name'));
                 });
-                newConextData.push(sArr);
+                newConextData["state"] = sArr;
             });
 
             // planning
             $('div#conext fieldset#planning').each(function (index, element) {
-
-                //console.log($(element));
-
-                plArr = new Array();
-                plArr["planning"] = $(element).find('textarea#planning').eq(0).attr('value');
-                newConextData.push(plArr);
+            	newConextData["planning"] = $(element).find('textarea#planning').eq(0).attr('value');
             });
 
-
-            console.log($(newConextData));
+            console.log(newConextData);
             
-            var blkstr = [];
-            $.each(newConextData, function(idx2,val2) {                    
-                 var str = idx2 + ":" + val2;
-                 blkstr.push(str);
-                 
-                 $.each(newConextData, function(idx2,val2) {                    
-                     var str = idx2 + ":" + val2;
-                     blkstr.push(str);
-                });
-            });
-            console.log(blkstr.join(", "));
-
             //entitydescriptor.conextData.push(newConextData);
 
             //console.log($("#conextdata"));
  //           $("#conextdata")[0].attr('value')="test123";
 
-            var conexttextarea = document.getElementById("conextdata");
+           // var conexttextarea = document.getElementById("conextdata");
                         
             //textarea.value = newConextData.join("\n");
 
