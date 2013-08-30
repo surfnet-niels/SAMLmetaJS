@@ -213,6 +213,15 @@
             });
 
             console.log(newConextData);
+
+            var conexttextarea = document.forms['samlmetajsform'].elements['conextdata'];
+            conexttextarea.value = "";
+            for (i in newConextData) {
+                conexttextarea.value += i + ": " + newConextData[i] + "\n";
+            }
+
+
+            console.log(conexttextarea.value);
             
             //entitydescriptor.conextData.push(newConextData);
 
@@ -224,6 +233,7 @@
             //textarea.value = newConextData.join("\n");
 
             //console.log($("#conextdata"));
+            //$('#conextdata').val(newConextData.toString());
 		},
 		
 		validate: function () {

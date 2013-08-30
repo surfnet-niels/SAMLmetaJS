@@ -158,10 +158,10 @@ var SAMLmetaJS = {};
 			'urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect': 'HTTP Redirect',
 			'urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST': 'HTTP POST',
 			'urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact': 'HTTP Artifact',
-			'urn:oasis:names:tc:SAML:2.0:bindings:SOAP': 'SOAP',
+			/*'urn:oasis:names:tc:SAML:2.0:bindings:SOAP': 'SOAP',
 			'urn:oasis:names:tc:SAML:2.0:bindings:PAOS': 'Reverse SOAP (PAOS)',
 			'urn:oasis:names:tc:SAML:profiles:SSO:request-init': 'Request Initiator',
-			'urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol': 'Discovery Response'
+			'urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol': 'Discovery Response'*/
 		},
 		'attributes' : {
 			'urn:oid:0.9.2342.19200300.100.1.1': '<b>UID</b><br>&nbsp;&nbsp;&nbsp;&nbsp;(urn:oid:0.9.2342.19200300.100.1.1)<br>&nbsp;&nbsp;&nbsp;&nbsp;(urn:mace:dir:attribute-def:uid)<br>&nbsp;',
