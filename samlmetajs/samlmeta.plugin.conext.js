@@ -214,10 +214,12 @@
 
             console.log(newConextData);
 
+            console.log(JSON.stringify(newConextData))
+
             var conexttextarea = document.forms['samlmetajsform'].elements['conextdata'];
             conexttextarea.value = "";
             for (i in newConextData) {
-                conexttextarea.value += i + ": " + newConextData[i] + "\n";
+                conexttextarea.value += i + "::" + newConextData[i] + "; ";
             }
 
 
