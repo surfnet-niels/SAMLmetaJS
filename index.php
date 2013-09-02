@@ -3,7 +3,7 @@ require_once('../../lib/_autoload.php');
 
 $as = new SimpleSAML_Auth_Simple('default-sp');
 $as->requireAuth();
-git clone
+
 ?>
 
 
