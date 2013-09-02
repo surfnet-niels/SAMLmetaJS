@@ -99,9 +99,9 @@ $as->requireAuth();
 
     <h1>SURFconext Service Provider Registration</h1>
 
-    Hello <?php $attributes["urn:mace:dir:attribute-def:displayName"][0] ?>,
+    Hello <?php $attributes["urn:mace:dir:attribute-def:displayName"][0]; ?>,
 
-    For the purpose of this registration we will use the following email address: <?php $attributes["urn:mace:dir:attribute-def:mail"][0] ?>
+    For the purpose of this registration we will use the following email address: <?php $attributes["urn:mace:dir:attribute-def:mail"][0]; ?>
     <br>You may provide a 'formal' contact endpoint via this form.
 
     <h2>Purpose</h2>
