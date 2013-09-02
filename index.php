@@ -1,4 +1,4 @@
-<php
+<?php
 require_once('../../../simplesamlphp/lib/_autoload.php');
 
 $as = new SimpleSAML_Auth_Simple('default-sp');
