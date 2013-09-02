@@ -14,7 +14,7 @@ $as->requireAuth();
 	<title>SAMLmetaJS Demo</title>
 	<meta name="author" content="Niels van Dijk" >
 
-<php
+<?php
 
     $attributes = $as->getAttributes();
     print_r($attributes);
