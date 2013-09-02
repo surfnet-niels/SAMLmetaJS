@@ -14,10 +14,8 @@ $as = new SimpleSAML_Auth_Simple('default-sp');
 $as->requireAuth();
 $attributes = $as->getAttributes();
 
-var_dump($attributes);
-
-$to_email = "nidi+spform@surfnet.nl, niels.vandijk+spform22@surfnet.nl";
-$from_email = "nidi+spform@surfnet.nl";
+$to_email = "nidi+spform@surfnet.nl, niels@het.net.je";
+$from_email = "surfconext-beheer@surfnet.nl";
 $conextdataHTML = "";
 
 $timestamp = date("d-m-Y H:i");
@@ -46,7 +44,7 @@ $conextdata = $_POST["conextdata"];
 $conextdata = explode(";",$conextdata);
 
 $conextdataHTML .= "<h2>Thank you for your request to conext a new Servide Provider!</h2>";
-$conextdataHTML .= "<div style='border-width: 1px;'><p><b>Date</b> " . $timestamp ."</br>";
+$conextdataHTML .= "<div style='border-width: 1px;'><p><b>Date</b>: " . $timestamp ."</br>";
 $conextdataHTML .= "<b>Request made by</b>: " .$user . "</br>";
 $conextdataHTML .= "<b>From IP adress</b>: " .$ip . "</br>";
 $conextdataHTML .= "<b>Email</b>: " .$email . "</br>";
@@ -66,7 +64,7 @@ $conextdataHTML .= "</div>";
 
 $conextdataHTML .= "<p>We revieved the following information:<br>";
 $conextdataHTML .= "<div style='border-width: 1px;'><pre>";
-$conextdataHTML .= $metadata;
+$conextdataHTML .= htmlspecialchars($metadata);
 $conextdataHTML .= "</pre></div>";
 
 print($conextdataHTML);
