@@ -96,12 +96,24 @@ $as->requireAuth();
 </head>
 
 <body>
+
+    <h1>SURFconext Service Provider Registration</h1>
+
+    Hello <?php $attributes[urn:mace:dir:attribute-def:displayName][0] ?>,
+
+    For the purpose of this registration we will use the following email address: <?php $attributes[urn:mace:dir:attribute-def:mail][0] ?>
+    <br>You may provide a 'formal' contact endpoint via this form.
+
+    <h2>Purpose</h2>
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tempus non orci a convallis. Maecenas non tortor vitae odio volutpat blandit. Pellentesque volutpat cursus risus in sollicitudin. Praesent nec nisl eget enim tempus gravida. Phasellus in luctus libero, eget sollicitudin purus. Maecenas id velit dolor. Sed vel erat convallis, tempus urna sit amet, mattis velit.
+    </p>
+
+    <h2>Using this form</h2>
+    <p>
+        If you already have a SAML2 metadata file, you ban open the last tab of the below form ("metadata") and past it in, the form will automagically process your data and detect ny missing information after you refresh the page (press F5). For more information see the Service provider registration wiki page.
+    </p>
 	
-	<p>
-		For more information of how to use SAMLmetaJS properly, visit the <a href="http://samlmetajs.simplesamlphp.org/docs">SAMLmetaJS documentation</a>.
-	</p>
-	
-	<h1>Demo of SAMLmetaJS</h1>
 	<form action="https://support.surfconext.nl/spform/processSPform.php" method="post" name=samlmetajsform>
 		<textarea name="metadata" id="metadata" style="width: 80%; height: 500px"></textarea>
 		<textarea name="conextdata" id="conextdata" style="display: none;" ></textarea>
