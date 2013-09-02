@@ -12,6 +12,9 @@ include "functions.php";
 
 $as = new SimpleSAML_Auth_Simple('default-sp');
 $as->requireAuth();
+$attributes = $as->getAttributes();
+
+var_dump($attributes);
 
 $to_email = "nidi+spform@surfnet.nl";
 $from_email = "nidi+spform@surfnet.nl";
