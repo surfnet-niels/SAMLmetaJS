@@ -7,7 +7,11 @@
  * To change this template use File | Settings | File Templates.
  */
 
+require_once('../../simplesamlphp/lib/_autoload.php');
 include "functions.php";
+
+$as = new SimpleSAML_Auth_Simple('default-sp');
+$as->requireAuth();
 
 $to_email = "nidi+spform@surfnet.nl";
 $from_email = "nidi+spform@surfnet.nl";
@@ -15,8 +19,8 @@ $conextdataHTML = "";
 
 $timestamp = date("d-m-Y H:i");
 $ip = $_SERVER["REMOTE_ADDR"];
-$user = "fed user";
-$email = "feduser@email.org";
+$user = $attributes["urn:mace:dir:attribute-def:displayName"][0];
+$email = $attributes["urn:mace:dir:attribute-def:mail"][0];
 $home_org = "user home org";
 
 $filename = "/tmp/".uniqid("spForm_").".xml";
