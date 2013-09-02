@@ -40,11 +40,12 @@ $conextdata = $_POST["conextdata"];
 <html>
 <body>
 <link type="text/css" href="samlmetajs/css/samlmetajs.css" rel="Stylesheet" />
+
 <?php
 
 $conextdata = explode(";",$conextdata);
 
-$conextdataHTML .= "<p>Thank you for your request to conext a Servide Provider!</br>"
+$conextdataHTML .= "<h2>Thank you for your request to conext a new Servide Provider!</h2>";
 $conextdataHTML .= "<div style='border-width: 1px;'><p><b>Date</b> " . $timestamp ."</br>";
 $conextdataHTML .= "<b>Request made by</b>: " .$user . "</br>";
 $conextdataHTML .= "<b>From IP adress</b>: " .$ip . "</br>";
