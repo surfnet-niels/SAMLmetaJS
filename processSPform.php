@@ -33,6 +33,11 @@ $conextdata = $_POST["conextdata"];
 // Fields are split by ;
 // key value pairs by :
 
+?>
+<html>
+<body>
+<link type="text/css" href="samlmetajs/css/samlmetajs.css" rel="Stylesheet" />
+<?php
 
 $conextdata = explode(";",$conextdata);
 
@@ -69,3 +74,6 @@ $sendok = sendMail(	$to_email,
 unlink($filename);
 
 ?>
+</body>
+
+
