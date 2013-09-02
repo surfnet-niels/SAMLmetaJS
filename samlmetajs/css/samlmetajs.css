@@ -2,8 +2,19 @@
 p {
     font-family: Arial, sans-serif;
     font-weight: lighter;
-    font-size: 12px;
+    font-size: 14px;
 }
+
+h1 {
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+}
+
+h2 {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+}
+
 
 div#tabs fieldset {
 	border: 1px solid #ccc;
