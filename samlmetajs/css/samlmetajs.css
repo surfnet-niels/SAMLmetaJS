@@ -1,4 +1,10 @@
 /* Generic Section */
+p {
+    font-family: Arial, sans-serif;
+    font-weight: lighter;
+    font-size: 12px;
+}
+
 div#tabs fieldset {
 	border: 1px solid #ccc;
 	margin: 1em .3em 2.5em .3em;

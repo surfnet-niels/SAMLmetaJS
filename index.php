@@ -115,7 +115,8 @@ $as->requireAuth();
 
     <h2>Using this form</h2>
     <p>
-        If you already have a SAML2 metadata file, you ban open the last tab of the below form ("metadata") and past it in, the form will automagically process your data and detect ny missing information after you refresh the page (press F5). For more information see the Service provider registration wiki page.
+        If you already have a SAML2 metadata file, you can open the last tab of the below form ("metadata") and past the XML into it.
+        The form will automagically process your data and detect ny missing information after you refresh the page (press F5). For more information see the Service provider registration wiki page.
     </p>
 	
 	<form action="https://support.surfconext.nl/spform/processSPform.php" method="post" name=samlmetajsform>
