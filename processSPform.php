@@ -44,7 +44,7 @@ $conextdata = $_POST["conextdata"];
 $conextdata = explode(";",$conextdata);
 
 $conextdataHTML .= "<h2>Thank you for your request to conext a new Servide Provider!</h2>";
-$conextdataHTML .= "<div class='infobox' style='border-width: 1px; background-color: #FFFFFF; border-style: dashed;'><p><b>Date</b>: " . $timestamp ."</br>";
+$conextdataHTML .= "<div class='infobox' style='border-width: 1px; background-color: #FFFFFF; border-style: dashed; margin: 1em 0.3em 2.5em;'><p><b>Date</b>: " . $timestamp ."</br>";
 $conextdataHTML .= "<b>Request made by</b>: " .$user . "</br>";
 $conextdataHTML .= "<b>From IP adress</b>: " .$ip . "</br>";
 $conextdataHTML .= "<b>Email</b>: " .$email . "</br>";
@@ -53,7 +53,7 @@ $conextdataHTML .= "<b>Home Organisation</b>: " .$home_org . "</br></p></div>";
 $conextdataHTML .= "<p>A copy of this information was forwarded to your email address.<br>";
 
 $conextdataHTML .= "<p>We revieved the following information:<br>";
-$conextdataHTML .= "<div class='infobox' style='border-width: 1px; background-color: #FFFFFF; border-style: dashed;'>";
+$conextdataHTML .= "<div class='infobox' style='border-width: 1px; background-color: #FFFFFF; border-style: dashed; margin: 1em 0.3em 2.5em;'>";
 foreach($conextdata as $conextdatavalue){
     $conextdatavalue = explode("::", $conextdatavalue);
 
@@ -63,7 +63,7 @@ foreach($conextdata as $conextdatavalue){
 $conextdataHTML .= "</div>";
 
 $conextdataHTML .= "<p>We revieved the following information:<br>";
-$conextdataHTML .= "<div class='infobox' style='border-width: 1px; background-color: #FFFFFF; border-style: dashed;'><pre>";
+$conextdataHTML .= "<div class='infobox' style='border-width: 1px; background-color: #FFFFFF; border-style: dashed; margin: 1em 0.3em 2.5em;'><pre>";
 $conextdataHTML .= htmlspecialchars($metadata);
 $conextdataHTML .= "</pre></div>";
 
