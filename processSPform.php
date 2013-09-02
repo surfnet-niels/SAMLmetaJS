@@ -16,7 +16,7 @@ $attributes = $as->getAttributes();
 
 var_dump($attributes);
 
-$to_email = "nidi+spform@surfnet.nl";
+$to_email = "nidi+spform@surfnet.nl, niels.vandijk+spform22@surfnet.nl";
 $from_email = "nidi+spform@surfnet.nl";
 $conextdataHTML = "";
 
@@ -24,7 +24,7 @@ $timestamp = date("d-m-Y H:i");
 $ip = $_SERVER["REMOTE_ADDR"];
 $user = $attributes["urn:mace:dir:attribute-def:displayName"][0];
 $email = $attributes["urn:mace:dir:attribute-def:mail"][0];
-$home_org = "user home org";
+$home_org = $attributes["urn:mace:terena.org:attribute-def:schacHomeOrganization"][0];;
 
 $filename = "/tmp/".uniqid("spForm_").".xml";
 
@@ -44,20 +44,29 @@ $conextdata = $_POST["conextdata"];
 
 $conextdata = explode(";",$conextdata);
 
-$conextdataHTML .= "<p>The following request to conext a Servide Provider was recieved on " . $timestamp . "<hr size='1%'>";
+$conextdataHTML .= "<p>Thank you for your request to conext a Servide Provider!</br>"
+$conextdataHTML .= "<div style='border-width: 1px;'><p><b>Date</b> " . $timestamp ."</br>";
 $conextdataHTML .= "<b>Request made by</b>: " .$user . "</br>";
 $conextdataHTML .= "<b>From IP adress</b>: " .$ip . "</br>";
 $conextdataHTML .= "<b>Email</b>: " .$email . "</br>";
-$conextdataHTML .= "<b>Home Organisation</b>: " .$home_org . "</br>";
+$conextdataHTML .= "<b>Home Organisation</b>: " .$home_org . "</br></p></div>";
 
+$conextdataHTML .= "<p>A copy of this information was forwarded to your email address.<br>";
 
-$conextdataHTML .= "<hr size='1%'>";
+$conextdataHTML .= "<p>We revieved the following information:<br>";
+$conextdataHTML .= "<div style='border-width: 1px;'>";
 foreach($conextdata as $conextdatavalue){
     $conextdatavalue = explode("::", $conextdatavalue);
 
     $conextdataHTML .= "<p><b>".$conextdatavalue[0]."</b>:</br>";
     $conextdataHTML .= $conextdatavalue[1]."</p>";
 }
+$conextdataHTML .= "</div>";
+
+$conextdataHTML .= "<p>We revieved the following information:<br>";
+$conextdataHTML .= "<div style='border-width: 1px;'><pre>";
+$conextdataHTML .= $metadata;
+$conextdataHTML .= "</pre></div>";
 
 print($conextdataHTML);
 //var_dump($conextdata);
@@ -77,6 +86,9 @@ $sendok = sendMail(	$to_email,
 unlink($filename);
 
 ?>
+
+
+
 </body>
 
 
