@@ -101,7 +101,7 @@ $as->requireAuth();
 
 <body>
 
-    <h1>SURFconext Service Provider Registration</h1>
+    <h2>SURFconext Service Provider Registration</h2>
     <p>
     Hello <?php echo $displayName; ?>, <br>
     Welcome to the SURFconext Service Provider Registration form.<br>
@@ -109,12 +109,12 @@ $as->requireAuth();
     <br>You may provide 'formal' contact endpoint(s) for you service via this form.
     <p>
 
-    <h2>Purpose</h2>
+    <h3>Purpose</h3>
     <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tempus non orci a convallis. Maecenas non tortor vitae odio volutpat blandit. Pellentesque volutpat cursus risus in sollicitudin. Praesent nec nisl eget enim tempus gravida. Phasellus in luctus libero, eget sollicitudin purus. Maecenas id velit dolor. Sed vel erat convallis, tempus urna sit amet, mattis velit.
     </p>
 
-    <h2>Using this form</h2>
+    <h3>Using this form</h3>
     <p>
         If you already have a SAML2 metadata file, you can open the last tab of the below form ("metadata") and past the XML into it.
         The form will automagically process your data and detect ny missing information after you refresh the page (press F5). For more information see the Service provider registration wiki page.

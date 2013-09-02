@@ -43,17 +43,17 @@ $conextdata = $_POST["conextdata"];
 
 $conextdata = explode(";",$conextdata);
 
-$conextdataHTML .= "<h1>Thank you for your request to conext a new Servide Provider!</h1>";
+$conextdataHTML .= "<h2>Thank you for your request to conext a new Servide Provider!</h2>";
 $conextdataHTML .= "<div class='infobox' style='border-width: 1px; background-color: #FFFFFF; border-style: dashed; margin: 1em 0.3em 2.5em;'>";
 $conextdataHTML .= "<p><table><tr><td><b>Date</b>: </td><td>" . $timestamp ."</td></tr>";
 $conextdataHTML .= "<tr><td><b>Request made by</b>: </td><td>" .$user . "</td></tr>";
 $conextdataHTML .= "<tr><td><b>From IP adress</b>: </td><td>" .$ip . "</td></tr>";
 $conextdataHTML .= "<tr><td><b>Email</b>: </td><td>" .$email . "</td></tr>";
-$conextdataHTML .= "<tr><td><b>Home Organisation</b>: </td><td>" .$home_org . "</td></tr></p></table></div>";
+$conextdataHTML .= "<tr><td><b>Home Organisation</b>: </td><td>" .$home_org . "</td></tr></table></div>";
 
-$conextdataHTML .= "<p>A copy of this information was forwarded to your email address.<br>";
+$conextdataHTML .= "A copy of this information was forwarded to your email address.</p>";
 
-$conextdataHTML .= "<h2>We revieved the following application information:</h2>";
+$conextdataHTML .= "<h3>We revieved the following application information:</h3>";
 $conextdataHTML .= "<div class='infobox' style='border-width: 1px; background-color: #FFFFFF; border-style: dashed; margin: 1em 0.3em 2.5em;'>";
 $conextdataHTML .= "<p><table>";
 foreach($conextdata as $conextdatavalue){
@@ -64,7 +64,7 @@ foreach($conextdata as $conextdatavalue){
 }
 $conextdataHTML .= "</table></div>";
 
-$conextdataHTML .= "<h2>We revieved the following SAML2 Metadata:</h2>";
+$conextdataHTML .= "<h3>We revieved the following SAML2 Metadata:</h3>";
 $conextdataHTML .= "<div class='infobox' style='border-width: 1px; background-color: #FFFFFF; border-style: dashed; margin: 1em 0.3em 2.5em;'><pre>";
 $conextdataHTML .= htmlspecialchars($metadata);
 $conextdataHTML .= "</pre></div>";
