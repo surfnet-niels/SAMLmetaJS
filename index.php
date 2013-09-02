@@ -102,11 +102,11 @@ $as->requireAuth();
 <body>
 
     <h1>SURFconext Service Provider Registration</h1>
-
-    Hello <?php echo $displayName; ?>,
-
-    For the purpose of this registration we will use the following email address: <?php echo  $mail; ?>
+    <p>
+    Hello <?php echo $displayName; ?>, welcome to the SURFconext Service Provider Registration form.<br>
+    For the purpose of this registration we will use the following email address: <b><?php echo  $mail; ?></b>
     <br>You may provide a 'formal' contact endpoint via this form.
+    <p>
 
     <h2>Purpose</h2>
     <p>
