@@ -1,9 +1,26 @@
+<php
+require_once('../../lib/_autoload.php');
+
+$as = new SimpleSAML_Auth_Simple('default-sp');
+$as->requireAuth();
+git clone
+?>
+
+
 <!doctype html>
 <html lang="en">
 <head>
 	<meta charset="utf-8">
 	<title>SAMLmetaJS Demo</title>
 	<meta name="author" content="Niels van Dijk" >
+
+<php
+
+    $attributes = $as->getAttributes();
+    print_r($attributes);
+
+?>
+
 
 	<!-- Include Google maps to use with SAMLmetaJS locaiton plugin -->
 	<!--<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>-->
