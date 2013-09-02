@@ -17,7 +17,11 @@ $as->requireAuth();
 <?php
 
     $attributes = $as->getAttributes();
-    print_r($attributes);
+    var_dump($attributes["urn:mace:dir:attribute-def:displayName"]);
+
+    $displayName = $attributes["urn:mace:dir:attribute-def:displayName"][0];
+    $mail = $attributes["urn:mace:dir:attribute-def:mail"][0];
+
 
 ?>
 
